@@ -43,7 +43,7 @@ const MessageHistory = ({}) => {
       <Title>Message History</Title>
       <Layout>
         <Layout.Content>
-          <Table dataSource={messages} columns={columns} />
+          <Table dataSource={messages} columns={columns} rowKey="sid" />
         </Layout.Content>
       </Layout>
     </Layout>

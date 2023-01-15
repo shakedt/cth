@@ -44,13 +44,18 @@ const SendMessageFrontEndOnly: React.FC = () => {
         }
       );
 
-      if (!(data.status === 200 || data.status === 201)) {
-        errorMessage();
-      } else {
+      if (data.status === 200 || data.status === 201) {
         const parsedData = await data.json();
-
-        dataManager.setNewData(parsedData);
+        dataManager.setNewData({
+          message: {
+            message,
+            sid: parsedData.sid,
+            phone,
+          },
+        });
         successMessage();
+      } else {
+        errorMessage();
       }
     } catch (err) {
       errorMessage();

@@ -27,7 +27,7 @@ const Messanger: React.FC<MessangerProps> = ({
       key: SelectedTab.MessageHistory,
       label: `Show History`,
       onClick: () => {
-        setSelectedTab(SelectedTab.MessageHistory);
+        router.push(SelectedTab.MessageHistory);
       },
     },
     {
