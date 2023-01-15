@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import { Table, Typography, Layout } from "antd";
 
 import dataManager from "@/src/utils/dataManger";
-import { MessageProps } from "@/src/server/types/messager";
+import { MessageProps } from "@/src/server/types/messanger";
 
 const { Title } = Typography;
 
